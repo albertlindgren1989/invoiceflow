@@ -2,8 +2,8 @@ FROM node:22-slim
 WORKDIR /app
 
 # Install all dependencies (including devDependencies for build)
-COPY package*.json ./
-RUN npm ci
+COPY package.json ./
+RUN npm install
 
 # Copy source files
 COPY src/ ./src/
